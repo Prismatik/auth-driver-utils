@@ -1,4 +1,4 @@
-# Auth Driver Utils
+# Auth Driver Utils [![Build Status](https://travis-ci.org/Prismatik/auth-driver-utils.svg?branch=master)](https://travis-ci.org/Prismatik/auth-driver-utils)
 
 Useful methods to extend Auth driver.
 
