@@ -5,7 +5,7 @@ Useful methods to extend Auth driver.
 ## Getting started
 
 ```
-npm i git+https@github.com:Prismatik/auth-driver-utils.git
+npm i auth-driver-utils
 ```
 
 ## Usage
