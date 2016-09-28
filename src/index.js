@@ -1,4 +1,4 @@
-import Authorization from './lib/authorization';
+import _Authorization from './lib/authorization';
 
 export default class Auth {
   constructor(client) {
@@ -32,7 +32,7 @@ export default class Auth {
 
     const entityType = obj.metadata && obj.metadata.type;
 
-    return new Authorization(obj.id, entityType, perms);
+    return new _Authorization(obj.id, entityType, perms);
   }
 
   errorify(err) {
@@ -40,3 +40,5 @@ export default class Auth {
     throw err;
   }
 }
+
+export const Authorization = _Authorization;
