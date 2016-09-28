@@ -9,6 +9,10 @@ export default class Auth {
     return this.client.get(id).then(this.parse).catch(this.errorify);
   }
 
+  create(data) {
+    return this.client.create(data).then(this.parse).catch(this.errorify);
+  }
+
   search(query) {
     return this.client.search(query)
       .then(entities => entities.map(this.parse))
