@@ -1,6 +1,6 @@
 {
   "name": "auth-driver-utils",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Useful methods to extend Auth driver.",
   "main": "dist/index.js",
   "scripts": {
