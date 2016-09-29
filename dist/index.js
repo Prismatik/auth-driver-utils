@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.Authorization = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -25,6 +26,11 @@ var Auth = function () {
     key: 'read',
     value: function read(id) {
       return this.client.get(id).then(this.parse).catch(this.errorify);
+    }
+  }, {
+    key: 'create',
+    value: function create(data) {
+      return this.client.create(data).then(this.parse).catch(this.errorify);
     }
   }, {
     key: 'search',
@@ -63,3 +69,4 @@ var Auth = function () {
 }();
 
 exports.default = Auth;
+var Authorization = exports.Authorization = _authorization2.default;
