@@ -25,7 +25,34 @@ Extends Auth driver's `.search` method by applying `.parse` to each result.
 
 ### .parse(obj: Object)
 
-Returns a valid auth user with some helper methods: `.is`, `.can` and `.allow`.
+Converts an Entity from the Auth Service into an Authorization instance with helper methods (see below).
+
+### .create(obj: Object)
+
+Creates a new entity within the Auth Service, then parses the new entity record into an Authorization instance.
+Note: You must provide the object in the Auth Service format (refer [entity schema](https://github.com/Prismatik/auth/blob/master/schemas/entity.md)), not a Authorization object.
+
+### .Authorization
+
+Provides direct access to the Authorization class, useful for testing permissions.
+
+```
+const Authorization = require('auth-driver-utils').Authorization;
+
+new Authorization(<id>, <role>, <permissions>)
+```
+
+Permissions must be in the Authorization format e.g.
+```
+permissions: {
+  <entity>: [<type>, <type>]
+  ...
+}
+```
+
+---
+
+### Authorization instance methods
 
 #### .is(id: UUID)
 
